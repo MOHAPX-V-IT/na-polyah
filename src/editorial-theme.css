@@ -1,0 +1,583 @@
+/* Editorial room: warm black ink, red annotations, a readable paper column. */
+:root {
+  --editor-ink: #2d2823;
+  --editor-red: #a9362c;
+  --editor-paper: #f4f2ec;
+  --editor-line: #cbc5b7;
+  --editor-secondary: #645d51;
+  color: var(--editor-ink);
+  background: var(--editor-paper);
+}
+button:focus-visible,
+a:focus-visible {
+  outline-color: var(--editor-red);
+}
+input:focus,
+textarea:focus {
+  outline-color: #9a4a37;
+}
+button:hover {
+  color: var(--editor-red);
+}
+.library {
+  background: #e9e6dd;
+  border-color: #c7c0af;
+}
+.brand {
+  color: #29231e;
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: -1.45px;
+}
+.monogram {
+  color: var(--editor-red);
+  font-size: 29px;
+}
+.monogram span {
+  border-left-color: var(--editor-red);
+}
+.brand small {
+  color: #625746;
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+.workspace-name {
+  border-color: #c8bfab;
+  background: #f6f3e9;
+  color: #4a402f;
+  font-size: 10px;
+  border-radius: 3px;
+}
+.workspace-name small {
+  color: #75684f;
+}
+.small-mark {
+  background: #dfd8c6;
+  border-color: #b8aa8e;
+  color: #69502d;
+  border-radius: 2px;
+}
+.library-title {
+  color: #665945;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.3px;
+}
+.library-title button {
+  color: var(--editor-red);
+}
+.search {
+  background: #f6f3ea;
+  border-color: #c8bfab;
+  border-radius: 3px;
+  color: #776a54;
+}
+.search input {
+  color: #44392b;
+  font-size: 11px;
+}
+.search input::placeholder {
+  color: #7c705a;
+  opacity: 1;
+}
+.doc-list > button {
+  color: #514635;
+  font-size: 12px;
+  line-height: 1.6;
+  border-radius: 2px;
+  padding: 11px 10px;
+}
+.doc-list > button svg {
+  color: #85704f;
+}
+.doc-list > button.selected {
+  color: #fcf7eb;
+  background: #3b3328;
+  box-shadow: inset 3px 0 var(--editor-red);
+}
+.doc-list > button.selected svg {
+  color: #e6c8a3;
+}
+.doc-list > button.selected small {
+  color: #f8ecd6;
+  border-color: #89714e;
+}
+.doc-list > button small {
+  color: #78552e;
+  border-color: #b9a17b;
+}
+.new-document {
+  font-size: 11px;
+  color: #9f3e2b;
+}
+.empty-library {
+  color: #76664c;
+  font-size: 11px;
+}
+.library-bottom > button {
+  color: #69583d;
+  font-size: 10px;
+}
+.library-bottom > button.selected {
+  color: var(--editor-red);
+}
+.identity {
+  border-color: #c8bca4;
+}
+.identity label {
+  color: #756247;
+  font-size: 9px;
+}
+.identity input {
+  color: #3f3120;
+  font-size: 11px;
+}
+.local-save {
+  color: #6d604a;
+  font-size: 8px;
+  line-height: 1.7;
+}
+.topbar {
+  background: #f8f6ef;
+  border-color: #cfc6b4;
+}
+.breadcrumbs {
+  color: #70634e;
+  font-size: 10px;
+}
+.breadcrumbs strong {
+  color: #403425;
+}
+.connection {
+  color: #655740;
+  font-size: 9px;
+}
+.share-button {
+  color: #6f3f2b;
+  border-color: #ba9c77;
+  border-radius: 3px;
+  font-size: 10px;
+  background: transparent;
+}
+.document-header {
+  padding-top: 37px;
+  padding-bottom: 31px;
+}
+.doc-kicker {
+  color: #8c513b;
+  font-size: 9px;
+  letter-spacing: 1.35px;
+}
+.document-dot {
+  background: var(--editor-red);
+  border-radius: 0;
+}
+.document-title {
+  color: #30251e;
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -1.35px;
+  line-height: 1.5;
+  margin-block: 14px;
+}
+.document-title:focus {
+  border-bottom-color: #af6c4b;
+}
+.document-meta {
+  color: #776248;
+  font-size: 9px;
+  gap: 12px;
+}
+.document-meta i {
+  background: #92734b;
+}
+.collaborators small {
+  color: #6f593c;
+  font-size: 9px;
+}
+.avatar-stack .avatar {
+  border-color: var(--editor-paper);
+}
+.editor-toolbar {
+  border-top: 1px solid #746044;
+  border-bottom-color: #c4b398;
+  padding-block: 11px;
+}
+.editing-label {
+  color: #6f5535;
+  font-size: 10px;
+}
+.pencil-dot {
+  background: var(--editor-red);
+}
+.toolbar-actions > button {
+  color: #66513a;
+  font-size: 10px;
+  min-height: 30px;
+}
+.toolbar-actions > button:hover {
+  color: var(--editor-red);
+  background: #e8dfce;
+}
+.toolbar-actions .comment-trigger {
+  color: var(--editor-red);
+  font-weight: 500;
+}
+.separator {
+  background: #cab796;
+}
+.paper {
+  background: #fffdf6;
+  border-color: #cfc2a8;
+  border-radius: 1px;
+  box-shadow: 0 8px 25px #47331708;
+  position: relative;
+}
+.paper::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 48px;
+  height: 3px;
+  background: var(--editor-red);
+}
+.paper-top {
+  color: #796044;
+  font-size: 8px;
+  letter-spacing: 1.55px;
+  border-bottom-color: #d7c8ad;
+  align-items: center;
+}
+.paper-top > span:last-child {
+  font-family: 'Literata', Georgia, serif;
+  font-size: 20px;
+  color: #8c3d2e;
+}
+.editor-content {
+  color: #352a21;
+}
+.cm-editor {
+  font-size: 17px !important;
+}
+.cm-editor .cm-content {
+  color: #352a21;
+  line-height: 1.95;
+}
+.cm-placeholder {
+  color: #7c6c56 !important;
+}
+.paper-footer {
+  color: #7c6748;
+  font-size: 8px;
+  border-top-color: #d6c3a1;
+}
+.discussion-title h2 {
+  color: #3f2a1e;
+  font-size: 22px;
+  font-weight: 500;
+}
+.discussion-title h2 > span {
+  background: #eed8c9;
+  color: #a03b2b;
+  font-size: 9px;
+  border-radius: 2px;
+}
+.discussion-title > button {
+  color: var(--editor-red);
+}
+.discussion-intro {
+  color: #766147;
+  font-size: 10px;
+  line-height: 1.7;
+}
+.comment-filters {
+  border-bottom-color: #c7b390;
+  gap: 11px;
+}
+.comment-filters button {
+  color: #7a6547;
+  font-size: 9px;
+  padding-bottom: 6px;
+}
+.comment-filters button.active {
+  color: var(--editor-red);
+  box-shadow: 0 2px 0 var(--editor-red);
+}
+.comment-filters span {
+  color: #78573a;
+  background: #e7dcc6;
+  font-size: 8px;
+  border-radius: 2px;
+}
+.comment-filters .active span {
+  color: #9a392b;
+  background: #efdad0;
+}
+.comment-card {
+  background: #fffbf0;
+  border-color: #cdb58f;
+  border-radius: 2px;
+  padding-inline: 16px;
+}
+.comment-card.focused {
+  border-color: #ae5a3e;
+  box-shadow: 0 0 0 1px #c7856138;
+}
+.comment-card.resolved {
+  opacity: 1;
+  background: #efeee3;
+  border-color: #c4c0a5;
+}
+.comment-avatar {
+  background: #efd8bd;
+  color: #963d2c;
+  font-size: 9px;
+  width: 28px;
+  height: 28px;
+}
+.comment-author strong {
+  color: #4a2e1c;
+  font-size: 11px;
+  font-weight: 500;
+}
+.comment-author small {
+  color: #7b6141;
+  font-size: 8px;
+}
+.comment-author > button {
+  color: #8d5431;
+}
+.quote {
+  background: #f2e6d0;
+  border-left: 3px solid #b14732;
+  color: #79512f;
+  font-size: 11px;
+  line-height: 1.8;
+  padding-block: 8px;
+}
+.quote > span {
+  color: #9e4930;
+  font-size: 7px;
+  font-weight: 500;
+}
+.quote.orphan {
+  background: #eee4d3;
+  border-left-color: #a18b6a;
+  color: #6f5c41;
+}
+.quote.orphan > span {
+  color: #8d5e3a;
+}
+.comment-card > p {
+  color: #4d3927;
+  font-size: 12px;
+  line-height: 1.8;
+}
+.comment-footer {
+  color: #7e6845;
+  font-size: 9px;
+  border-top-color: #dcc7a5;
+}
+.comment-footer button {
+  color: #95472e;
+  font-size: 9px;
+}
+.reply {
+  border-left-color: #cba47b;
+}
+.reply strong {
+  color: #8b422c;
+  font-size: 10px;
+}
+.reply p {
+  color: #62442a;
+  font-size: 11px;
+}
+.discussion-empty {
+  color: #a34832;
+  background: #efe6d3;
+  border: 1px solid #cdb38b;
+  border-radius: 2px;
+  padding-inline: 23px;
+}
+.discussion-empty h3 {
+  color: #6e442b;
+  font-size: 17px;
+}
+.discussion-empty p {
+  color: #785d3d;
+  font-size: 11px;
+  line-height: 1.85;
+}
+.discussion-empty > span {
+  color: #93653e;
+  font-size: 11px;
+}
+.discussion-note {
+  color: #8d5f3b;
+  border-top-color: #ccb38f;
+}
+.discussion-note p {
+  color: #7a5f3e;
+  font-size: 10px;
+  line-height: 1.8;
+}
+.statusbar {
+  color: #6f5b3f;
+  font-size: 8px;
+  border-top-color: #c8b694;
+}
+.notice {
+  color: #5d633f;
+  border-radius: 2px;
+  font-size: 11px;
+}
+.notice.error {
+  color: #9e452a;
+  border-color: #d2a17c;
+  background: #f8e9d9;
+}
+.share-panel {
+  border-color: #c6a782;
+  background: #eee2cb;
+  border-radius: 2px;
+}
+.share-panel p {
+  color: #755638;
+  font-size: 11px;
+}
+.share-panel small {
+  color: #785839;
+  font-size: 9px;
+}
+.share-panel > button {
+  color: #8b3d29;
+  border-color: #b48c61;
+}
+.comment-composer {
+  background: #f9f0df;
+  border-color: #b77851;
+  border-radius: 2px;
+}
+.section-label {
+  color: #9b462e;
+  font-size: 8px;
+}
+.comment-composer blockquote {
+  color: #80532d;
+  border-left-color: var(--editor-red);
+  font-size: 12px;
+}
+.comment-composer textarea,
+.reply-form textarea {
+  background: #fffdf7;
+  border-color: #cfac80;
+  color: #4b301e;
+}
+.comment-composer textarea::placeholder,
+.reply-form textarea::placeholder {
+  color: #866749;
+  opacity: 1;
+}
+.send-button {
+  background: var(--editor-red);
+  color: #fffaf1;
+  border-radius: 3px;
+  font-size: 11px;
+}
+.send-button:hover {
+  background: #842a24;
+  color: #fff;
+}
+.welcome-symbol {
+  background: #e7d9bd;
+  color: #a8452f;
+  border-color: #bca176;
+}
+.welcome .doc-kicker {
+  color: #8e492f;
+}
+.welcome h1 {
+  color: #402b1e;
+}
+.welcome p {
+  color: #705438;
+}
+.modal {
+  border-radius: 3px;
+  background: #fff9eb;
+  border-color: #c7a982;
+}
+.modal h2 {
+  color: #5b3321;
+}
+.modal > p,
+.modal label {
+  color: #7a5535;
+}
+.modal input {
+  border-color: #c6a477;
+  color: #50301d;
+}
+@media (max-width: 1200px) {
+  .brand {
+    font-size: 25px;
+  }
+  .document-title {
+    font-size: 31px;
+  }
+  .comment-filters {
+    gap: 8px;
+  }
+  .comment-filters button {
+    font-size: 8px;
+  }
+}
+@media (max-width: 980px) {
+  .discussion-title h2 {
+    font-size: 22px;
+  }
+  .comment-filters button {
+    font-size: 10px;
+  }
+  .comment-filters {
+    gap: 15px;
+  }
+}
+@media (max-width: 650px) {
+  .document-title {
+    font-size: 25px;
+  }
+  .doc-kicker {
+    font-size: 7px;
+  }
+  .breadcrumbs {
+    font-size: 8px;
+  }
+  .document-meta {
+    font-size: 8px;
+  }
+  .toolbar-actions > button {
+    font-size: 8px;
+  }
+  .toolbar-actions .comment-trigger {
+    font-size: 0;
+  }
+  .cm-editor {
+    font-size: 16px !important;
+  }
+  .paper-top {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .paper-top > span:last-child {
+    font-size: 17px;
+  }
+  .paper-footer {
+    font-size: 7px;
+  }
+  .statusbar {
+    font-size: 7px;
+  }
+}
